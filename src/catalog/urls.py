@@ -1,7 +1,7 @@
 from django.urls import path
 
-from catalog.views import home
+from .views import CarModelListView
 
 urlpatterns = [
-    path('', home, name='home'),
+    path('', CarModelListView.as_view(), name='carmodel-list'),
 ]

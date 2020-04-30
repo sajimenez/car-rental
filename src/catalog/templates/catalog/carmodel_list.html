@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<ul>
+{% for model in object_list %}
+    <li>
+        <h3>{{ model.name }}</h3>
+        <ul>
+        <li>Size: {{ model.size }}</li>
+        <li>Doors: {{ model.doors }}</li>
+        <li>Is Diesel: {{ model.is_diesel }}</li>
+        </ul>  
+        <a href="#">Book this car</a>    
+    </li>
+{% empty %}
+    <li>No car models yet.</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

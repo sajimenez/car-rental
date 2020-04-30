@@ -1,5 +1,10 @@
-from django.http import HttpResponse
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.list import ListView
+
+from .models import CarModel
 
 
-def home(request):
-    return HttpResponse('Home')
+class CarModelListView(LoginRequiredMixin, ListView):
+    login_url = '/login/'
+    model = CarModel
+    paginate_by = 50
