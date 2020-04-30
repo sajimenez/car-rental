@@ -1,0 +1,257 @@
+[
+    {
+        "model": "catalog.carmodel",
+        "pk": 1,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:25:12.202Z",
+            "last_modified": "2020-04-30T17:25:12.202Z",
+            "name": "Suzuki Swift",
+            "doors": 5,
+            "is_diesel": false,
+            "size": "minicompact"
+        }
+    },
+    {
+        "model": "catalog.carmodel",
+        "pk": 2,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:25:26.709Z",
+            "last_modified": "2020-04-30T17:25:26.709Z",
+            "name": "Toyota Corolla",
+            "doors": 4,
+            "is_diesel": false,
+            "size": "compact"
+        }
+    },
+    {
+        "model": "catalog.carmodel",
+        "pk": 3,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:25:49.305Z",
+            "last_modified": "2020-04-30T17:25:49.306Z",
+            "name": "Peugeot Partner",
+            "doors": 4,
+            "is_diesel": true,
+            "size": "van"
+        }
+    },
+    {
+        "model": "catalog.carmodel",
+        "pk": 4,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:26:02.914Z",
+            "last_modified": "2020-04-30T17:26:02.914Z",
+            "name": "GM Dmax",
+            "doors": 2,
+            "is_diesel": true,
+            "size": "pickup"
+        }
+    },
+    {
+        "model": "catalog.carmodel",
+        "pk": 5,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:28:01.105Z",
+            "last_modified": "2020-04-30T17:28:01.105Z",
+            "name": "Hyundai i10",
+            "doors": 4,
+            "is_diesel": false,
+            "size": "minicompact"
+        }
+    },
+    {
+        "model": "catalog.car",
+        "pk": 1,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:26:33.955Z",
+            "last_modified": "2020-04-30T17:26:33.955Z",
+            "model": 1
+        }
+    },
+    {
+        "model": "catalog.car",
+        "pk": 2,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:26:38.230Z",
+            "last_modified": "2020-04-30T17:26:38.230Z",
+            "model": 1
+        }
+    },
+    {
+        "model": "catalog.car",
+        "pk": 3,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:26:43.209Z",
+            "last_modified": "2020-04-30T17:26:43.209Z",
+            "model": 2
+        }
+    },
+    {
+        "model": "catalog.car",
+        "pk": 4,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:26:48.354Z",
+            "last_modified": "2020-04-30T17:26:48.354Z",
+            "model": 2
+        }
+    },
+    {
+        "model": "catalog.car",
+        "pk": 5,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:26:52.865Z",
+            "last_modified": "2020-04-30T17:26:52.865Z",
+            "model": 3
+        }
+    },
+    {
+        "model": "catalog.car",
+        "pk": 6,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:26:57.862Z",
+            "last_modified": "2020-04-30T17:26:57.862Z",
+            "model": 3
+        }
+    },
+    {
+        "model": "catalog.car",
+        "pk": 7,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:27:06.928Z",
+            "last_modified": "2020-04-30T17:27:06.928Z",
+            "model": 4
+        }
+    },
+    {
+        "model": "catalog.car",
+        "pk": 8,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:27:11.337Z",
+            "last_modified": "2020-04-30T17:27:11.337Z",
+            "model": 4
+        }
+    },
+    {
+        "model": "catalog.car",
+        "pk": 9,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:28:12.832Z",
+            "last_modified": "2020-04-30T17:28:12.832Z",
+            "model": 5
+        }
+    },
+    {
+        "model": "catalog.car",
+        "pk": 10,
+        "fields": {
+            "is_active": true,
+            "created": "2020-04-30T17:28:17.326Z",
+            "last_modified": "2020-04-30T17:28:17.326Z",
+            "model": 5
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$180000$wb7EbqvN566P$Ou1ZjFJhSPY61w3lmEP5iaYIbpccxyek7KRPE6yr3Fw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "jose",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-04-30T16:50:33Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$180000$oOJSjnSnfWBC$KtCOsfTfvUD6WBVzK6rSUe4sO+kriNXlRsZs4KwmGuk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "pedro",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-04-30T16:50:56Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$180000$lUlM3tzpxRRW$XZgMe2KXmk1p/RWssFTPxnJoTKelFJaacpVhki2t/C0=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "juan",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-04-30T16:51:15Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$180000$rDID46ZMGklH$LYTSKB1P0z7TIEp8cJq+hmBryfhBaZkrsZswUU9r73o=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "maria",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-04-30T16:51:31Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$180000$jYg9LIV3RV3i$lLvMPcgdD9i0BMt+GsClNld1NJPrjfvdNj7xSISITZg=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "elena",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-04-30T16:51:51Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]

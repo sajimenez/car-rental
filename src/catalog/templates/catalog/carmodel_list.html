@@ -5,13 +5,10 @@
 <ul>
 {% for model in object_list %}
     <li>
-        <h3>{{ model.name }}</h3>
+        <h5><a href="{% url 'carmodel-detail' model.id %}">{{ model.name }}</a></h5>
         <ul>
         <li>Size: {{ model.size }}</li>
-        <li>Doors: {{ model.doors }}</li>
-        <li>Is Diesel: {{ model.is_diesel }}</li>
-        </ul>  
-        <a href="#">Book this car</a>    
+        </ul>   
     </li>
 {% empty %}
     <li>No car models yet.</li>

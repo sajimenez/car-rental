@@ -1,0 +1,71 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h3>{{ object.name }}</h3>
+<ul>
+<li>Size: {{ object.size }}</li>
+<li>Size: {{ object.doors }}</li>
+<li>Size: {{ object.is_diesel }}</li>
+</ul>   
+<br/>
+<div class="row">
+    <div class="col-lg-4">
+        <form method="post" id="post-form">
+            {{ form.date_from.label_tag }}
+            <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+            <input class="form-control" name="date_from" id="date-from">
+            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+            </div>
+            </div>
+            {{ form.date_until.label_tag }}
+            <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+            <input class="form-control" name="date_until" id="date-until">
+            <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+            </div>
+            </div>
+            <input type="hidden" id="model-id" name="model_id" value="{{ object.id }}" />
+            <span id="resp-msg"></span><br/>
+            <button type="submit" class="btn btn-outline-success">Book</button>
+        </form>
+    </div>
+</div>
+
+<script>
+  $(function () {
+    $("#datetimepicker1").datetimepicker({
+      format: 'DD/MM/YYYY HH:mm',
+    });
+  });
+
+  $(function () {
+    $("#datetimepicker2").datetimepicker({
+      format: 'DD/MM/YYYY HH:mm',
+    });
+  });
+
+  $('#post-form').on('submit', function(event){
+    event.preventDefault();
+    console.log("form submitted!");  // sanity check
+    create_post();
+  });
+
+  function create_post() {
+      console.log("sending!");  // sanity check
+      console.log($('#date-from').val());  // sanity check
+      $('#resp-msg').text('');
+      $.post('/reservation/book/', {
+        model_id: $('#model-id').val(),
+        date_from: $('#date-from').val(),
+        date_until: $('#date-until').val()
+      }).done(function(response){
+        $('#resp-msg').text(response['msg'])
+      }).fail(function(){
+        $('#resp-msg').text("Error: counld not context server.")
+      });
+  };
+</script>
+
+{% endblock %}
