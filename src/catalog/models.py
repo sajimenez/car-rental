@@ -5,6 +5,9 @@ User = get_user_model()
 
 
 class BaseModel(models.Model):
+    class Meta:
+        abstract = True
+
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
