@@ -1,0 +1,162 @@
+[
+    {
+        "model": "core.user",
+        "pk": 1,
+        "fields": {
+            "password": "clave123",
+            "username": "user1"
+        }
+    },
+    {
+        "model": "core.user",
+        "pk": 2,
+        "fields": {
+            "password": "clave123",
+            "username": "user2"
+        }
+    },
+    {
+        "model": "core.user",
+        "pk": 3,
+        "fields": {
+            "password": "clave123",
+            "username": "user3"
+        }
+    },
+    {
+        "model": "core.user",
+        "pk": 4,
+        "fields": {
+            "password": "clave123",
+            "username": "user4"
+        }
+    },
+    {
+        "model": "core.user",
+        "pk": 5,
+        "fields": {
+            "password": "clave123",
+            "username": "user5"
+        }
+    },
+    {
+        "model": "core.carmodel",
+        "pk": 1,
+        "fields": {
+            "name": "Suzuki Swift",
+            "doors": 5,
+            "is_diesel": false,
+            "size": "minicompact"
+        }
+    },
+    {
+        "model": "core.carmodel",
+        "pk": 2,
+        "fields": {
+            "name": "Toyota Corolla",
+            "doors": 4,
+            "is_diesel": false,
+            "size": "compact"
+        }
+    },
+    {
+        "model": "core.carmodel",
+        "pk": 3,
+        "fields": {
+            "name": "Peugeot Partner",
+            "doors": 4,
+            "is_diesel": true,
+            "size": "van"
+        }
+    },
+    {
+        "model": "core.carmodel",
+        "pk": 4,
+        "fields": {
+            "name": "GM Dmax",
+            "doors": 2,
+            "is_diesel": true,
+            "size": "pickup"
+        }
+    },
+    {
+        "model": "core.carmodel",
+        "pk": 5,
+        "fields": {
+            "name": "Hyundai i10",
+            "doors": 4,
+            "is_diesel": false,
+            "size": "minicompact"
+        }
+    },
+    {
+        "model": "core.car",
+        "pk": 1,
+        "fields": {
+            "car_model": 1
+        }
+    },
+    {
+        "model": "core.car",
+        "pk": 2,
+        "fields": {
+            "car_model": 1
+        }
+    },
+    {
+        "model": "core.car",
+        "pk": 3,
+        "fields": {
+            "car_model": 2
+        }
+    },
+    {
+        "model": "core.car",
+        "pk": 4,
+        "fields": {
+            "car_model": 2
+        }
+    },
+    {
+        "model": "core.car",
+        "pk": 5,
+        "fields": {
+            "car_model": 3
+        }
+    },
+    {
+        "model": "core.car",
+        "pk": 6,
+        "fields": {
+            "car_model": 3
+        }
+    },
+    {
+        "model": "core.car",
+        "pk": 7,
+        "fields": {
+            "car_model": 4
+        }
+    },
+    {
+        "model": "core.car",
+        "pk": 8,
+        "fields": {
+            "car_model": 4
+        }
+    },
+    {
+        "model": "core.car",
+        "pk": 9,
+        "fields": {
+            "car_model": 5
+        }
+    },
+    {
+        "model": "core.car",
+        "pk": 10,
+        "fields": {
+            "car_model": 5
+        }
+    }
+]

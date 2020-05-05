@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "_navbar.html" %}
+<h4>Car Models:</h4>
+<ul>
+    {% for model in object_list %}
+    <li>
+        <a href="{% url 'carmodel-detail' model.id %}">{{ model.name }}</a>
+        <ul>
+            <li>Size: {{ model.size }}</li>
+        </ul>
+    </li>
+    {% empty %}
+    <li>No car models yet.</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

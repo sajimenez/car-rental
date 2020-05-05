@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "_navbar.html" %}
+
+<h3>{{ object.name }}</h3>
+<ul>
+    <li>Size: {{ object.size }}</li>
+    <li>Doors: {{ object.doors }}</li>
+    <li>Is Diesel? {{ object.is_diesel }}</li>
+</ul>
+<br />
+<form action="{% url 'book-car' %}" id="reservation-form">
+    {% csrf_token %}
+    <div id="date-from-errors" style="color:red"></div>
+    <p>
+        Date From
+        <input id="date-from" placeholder="DD/MM/YYYY 24HH:MM">
+    </p>
+    <div id="date-until-errors" style="color:red"></div>
+    <p>
+        Date Until
+        <input id="date-until" placeholder="DD/MM/YYYY 24HH:MM">
+    </p>
+    <input type="hidden" id="model-id" value="{{ object.id }}">
+    <div id="non-field-errors" style="color:red"></div>
+    <input type="submit" value="book car">
+</form>
+
+{% endblock %}
+
+{% block script %}
+<script>
+
+    $('#reservation-form').submit(function (e) {
+        e.preventDefault();
+        const data = {
+            model_id: $('#model-id').val(),
+            date_from: $('#date-from').val(),
+            date_until: $('#date-until').val()
+        };
+        const csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+        $('#non-field-errors').empty();
+        $('#date-from-errors').empty();
+        $('#date-until-errors').empty();
+        $.ajax({
+            type: "POST",
+            url: $(this).attr('action'),
+            data: JSON.stringify(data),
+            headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+            },
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }).done(function (rsp) {
+            alert("Car reservation success!");
+            window.location.replace({% url 'reservation-list' %})
+        }).fail(function (rsp) {
+            rspJSON = rsp.responseJSON;
+            if(rsp.status===400){
+                if('non_field_errors' in rspJSON){
+                    for(let err of rspJSON.non_field_errors){
+                        $('#non-field-errors').append("<p>"+err+"</p>");
+                    }
+                }
+                if('date_from' in rspJSON){
+                    for(let err of rspJSON.date_from){
+                        $('#date-from-errors').append("<p>"+err+"</p>");
+                    }
+                }
+                if('date_until' in rspJSON){
+                    for(let err of rspJSON.date_until){
+                        $('#date-until-errors').append("<p>"+err+"</p>");
+                    }
+                }
+            }
+        });
+    });
+</script>
+{% endblock script %}

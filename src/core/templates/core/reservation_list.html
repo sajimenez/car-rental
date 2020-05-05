@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "_navbar.html" %}
+<h4>Reservations:</h4>
+<ul>
+    {% for reservation in object_list %}
+    <li>
+        ID: {{ reservation.id }}
+        <ul>
+            <li>Car model: {{ reservation.car.car_model.name }}</li>
+            <li>Date from: {{ reservation.date_from }}</li>
+            <li>Date until: {{ reservation.date_until }}</li>
+        </ul>
+    </li>
+    {% empty %}
+    <li>No reservations yet.</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
